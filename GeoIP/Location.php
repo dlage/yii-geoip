@@ -28,6 +28,7 @@
  * @category Net
  * @package  GeoIP
  * @author   Hans Lellelid <hans@xmpl.org>
+ * @author   Dinis Lage <dinislage@gmail.com>
  * @license  LGPL http://www.gnu.org/licenses/lgpl.txt
  * @link     http://pear.php.net/package/GeoIP
  * $Id: Location.php 296763 2010-03-25 00:53:44Z clockwerx $

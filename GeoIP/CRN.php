@@ -4,7 +4,7 @@
  * +----------------------------------------------------------------------+
  * | PHP version 5                                                        |
  * +----------------------------------------------------------------------+
- * | Copyright (C) 2009 MaxMind LLC                                       |
+ * | Copyright (C) 2010 Dinis Lage                                        |
  * +----------------------------------------------------------------------+
  * | This library is free software; you can redistribute it and/or        |
  * | modify it under the terms of the GNU Lesser General Public           |
@@ -38,12 +38,11 @@
  * $region = GeoIPDMA::getMetroRegion($record->dmaCode);
  * </code>
  * 
- * @category Net
+ * @category
  * @package  GeoIP
- * @author   Hans Lellelid <hans@xmpl.org>
- * @author   Dmitri Snytkine <d.snytkine@gmail.com>
+ * @author   Dinis Lage <dinislage@gmail.com>
  * @license  LGPL http://www.gnu.org/licenses/lgpl.txt
- * @version  $Revision: 296755 $
+ * @version
  * @link     http://pear.php.net/package/GeoIP
  */
 class GeoIP_CRN {
@@ -4523,9 +4522,10 @@ class GeoIP_CRN {
   /**
    * Reverse lookup of DMA code if [exact] metro region name is known.
    *
-   * @param string $metro Metro region name.
+   * @param string $countryCode Country code.
+   * @param string $regionName Region name.
    *
-   * @return int DMA code, or false if not found.
+   * @return int Region code, or false if not found.
    */
   public static function getRegionCode($regionName, $countryCode=null) {
     if ($countryCode === null) {
