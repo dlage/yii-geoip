@@ -20,16 +20,18 @@ Installation of the component:
 
 -----------------------------------------------
 Usage instructions:
+
 All methods accept an IP address as an argument.
 If no argument is supplied CHttpRequest::getUserHostAddress() is used.
-
+`
   $location = Yii::app()->geoip->lookupLocation();
   $countryCode = Yii::app()->geoip->lookupCountryCode();
   $countryName = Yii::app()->geoip->lookupCountryName();
   $org = Yii::app()->geoip->lookupOrg();
   $regionCode = Yii::app()->geoip->lookupRegion();
-
+`
 Location attributes:
+`
   $location->countryCode
   $location->countryCode3
   $location->countryName
@@ -41,11 +43,13 @@ Location attributes:
   $location->longitude
   $location->areaCode
   $location->dmaCode
+`
 
 -----------------------------------------------
 How to update Maxmind Free DBs example:
-#updateGeoIP.sh
-#this script will only download if there is a new version of the database
+updateGeoIP.sh
+this script will only download if there is a new version of the database
+`
   cd /usr/local/share/GeoIP
   wget -N -q http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
   wget -N -q http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz
@@ -54,5 +58,6 @@ How to update Maxmind Free DBs example:
   gunzip -c GeoLiteCity.dat.gz > GeoLiteCity.dat
   gunzip -c GeoIP.dat.gz > GeoIP.dat
   gunzip -c GeoIPv6.dat.gz > GeoIPv6.dat
+`
 
 #Setup a cron job to run this script monthly.
