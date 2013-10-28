@@ -4516,7 +4516,8 @@ class GeoIP_CRN {
     if ($countryCode === null || $regionCode === null || !isset(self::$crnMap[$countryCode][$regionCode])) {
       return null;
     }
-    return self::$crnMap[$countryCode][$regionCode];
+    if (isset(self::$crnMap[$countryCode][$regionCode]))
+      return self::$crnMap[$countryCode][$regionCode];
   }
 
   /**
