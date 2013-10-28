@@ -4513,7 +4513,7 @@ class GeoIP_CRN {
    * @return string Metro region name.
    */
   public static function getRegionName($countryCode, $regionCode) {
-    if ($countryCode === null || $regionCode === null) {
+    if ($countryCode === null || $regionCode === null || !isset(self::$crnMap[$countryCode][$regionCode])) {
       return null;
     }
     return self::$crnMap[$countryCode][$regionCode];
